@@ -1,15 +1,17 @@
 <?php
+//Creacion de la clase Controlador Alumnos
 class Alumnos extends CI_Controller {
     function __construct() {
         parent::__construct();
-        $this->load->model('model_alumnos');
+        $this->load->model('model_alumnos');  //Cargamos el la Clase Modelo
     }
+// Creamos la Funcion Index del modulo Alumnos
     public function Index() {
-        $data['titulo'] = 'Alumnos';
-        $this->load->view('Plantilla/header', $data);
-        $datos['alumnos'] = $this->model_alumnos->getAll();
-        $this->load->view('Alumnos/index', $datos);
-        $this->load->view('Plantilla/footer');
+        $data['titulo'] = 'Alumnos';  // Asignamos nombre a la pagina
+        $this->load->view('Plantilla/header', $data);  //Enviamos a la vista la cabecera
+        $datos['alumnos'] = $this->model_alumnos->getAll();  //Recuperamos Todos los alumnos regstrados en la Tabla Alumnos
+        $this->load->view('Alumnos/index', $datos); //Pasomos a la Vista - Alumnos, todos los alumnos consultados mediante un array
+        $this->load->view('Plantilla/footer');  // Enviamos a la vista index el footer de la pagina
     }
 
       public function llena_localidades()
