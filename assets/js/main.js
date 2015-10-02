@@ -1,81 +1,50 @@
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#eps").change(function() {
-        $("#eps option:selected").each(function() {
-            eps = $('#eps').val();
-            $.post("<?= base_url("Alumnos/create"); ?>", {
-                eps : eps
-            }
-        });
-        }); 
-
-        $("#ips").change(function() {
-            $("#ips option:selected").each(function() {
-                ips = $('#ips').val();
-                $.post("<?= base_url("Alumnos/create"); ?>", {
-                    ips : ips
-                }
+$(document).ready(function (){
+    //fill data
+    var btnedit='';
+    var btndelete = '';
+        fillgrid();
+        // add data
+        $("#frmadd").submit(function (e){
+            e.preventDefault();
+            $("#loader").show();
+            var url = $(this).attr('action');
+            var data = $(this).serialize();
+            $.ajax({
+                url:url,
+                type:'POST',
+                data:data
+            }).done(function (data){
+                $("#response").html(data);
+                $("#loader").hide();
+                fillgrid();
             });
-            })  
-
         });
+      };
 
-        $("#genero").change(function() {
-            $("#genero option:selected").each(function() {
-                genero = $('#genero').val();
-                $.post("<?= base_url("Alumnos/create"); ?>", {
-                    genero : genero
-                }
-            });
-            })  
+      $(function(){
+	var pull		= $('#mmovil');
+		menu		= $('nav ul');
+		menuHeight	= menu.height();
+	$(pull).on('click',function(e){
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w>320 && menu.is(':hidden')){
+			menu.removeAttr('style');
+		}
+	});
+});
 
-        });
-
-        $("#tipoIdentificacion").change(function() {
-            $("#tipoIdentificacion option:selected").each(function() {
-                tidentificacion = $('#tipoIdentificacion').val();
-                $.post("<?= base_url("Alumnos/create"); ?>", {
-                    tidentificacion : tidentificacion
-                }
-            });
-            })  
-
-        });
-
-        $("#rh").change(function() {
-            $("#rh option:selected").each(function() {
-                rh = $('#rh').val();
-                $.post("<?= base_url("Alumnos/create"); ?>", {
-                    rh : rh
-                }
-            });
-            })  
-
-        });
-
-        $("#estado").change(function() {
-            $("#estado option:selected").each(function() {
-                estado = $('#estado').val();
-                $.post("<?= base_url("Alumnos/create"); ?>", {
-                    estado : estado
-                }
-            });
-            })  
-
-        });
-
-        $(document).ready(function() {
-            $("#provincia").change(function() {
-                $("#provincia option:selected").each(function() {
-                    provincia = $('#provincia').val();
-                    $.post("<?= base_url("Alumnos/create"); ?>", {
-                        provincia : provincia
-                    }, function(data) {
-                        $("#localidad").html(data);
-                    });
-                });
-            })
-
-
-        });
-        </script>
+jQuery(function() {
+	jQuery('#allinone_bannerRotator_classic').allinone_bannerRotator({
+		skin: 'classic',
+		width: 2000,
+		height: 760,
+		width100Proc:true,
+		responsive:true,
+		showPreviewThumbs:false,
+		defaultEffect: 'fade'
+	});
+});

@@ -1,0 +1,356 @@
+
+header figure{
+  margin-top: 0;
+  float:left !important;
+  margin-left: 50px !important;
+}
+header figure img{
+  width: 70px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#preview{
+  margin-top: 0;
+  float:left; !important;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+}
+
+.subtitulos{
+  color: #495885;
+  color: bold;
+  font-size: 13px;
+
+}
+
+p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000;
+	margin:6px;
+}
+/*--- Menu ---*/
+#menu{
+	height:80px;
+	background:#424751;
+	border-radius:0 0 15px 15px;
+}
+#logo{
+	width:323px;
+	height:35px;
+	float:left;
+	padding:24px 0 0 22px;
+}
+#menu ul{
+	display:block;
+	min-width:400px;
+	float:right;
+	margin:0;
+	padding:0;
+	list-style:none;
+	padding-top:14px;
+}
+#menu li{
+	float:left;
+}
+#menu li a{
+	height:15px;
+	display:block;
+	padding:0 15px;
+	border-right:1px solid #666666;
+	font-family:'ArchivoNarrowregular', Arial, sans-serif;
+	font-size:15px;
+	color:#A1A3A8;
+	position:relative;
+	padding-top:30px;
+	font-weight:normal;
+}
+#menu li a .iconos{
+	width:22px;
+	height:21px;
+	display:block;
+	position:absolute;
+	left:40%;
+	top:5px;
+}
+#menu li a.ultimo{
+	height:15px;
+	display:block;
+	padding:0 20px;
+	border-right:none;
+	font-family:'ArchivoNarrowregular', Arial, sans-serif;
+	font-size:15px;
+	color:#A1A3A8;
+	position:relative;
+	padding-top:30px;
+	font-weight:normal;
+}
+#menu li a:hover, #menu li a.ultimo:hover{
+	color:#00BFFF;
+}
+#mmovil{
+	display:none;
+}
+.inicio{
+	display:none;
+}
+/*--- Cuerpo ---*/
+#inferior{
+	margin:20px 0 10px 0;
+	background:url(../imagenes/fondo-inferior.png);
+	min-height:200px;
+	padding-bottom:10px;
+}
+#inferior-centro{
+	width:1280px;
+	margin:0 auto;
+	position:relative;
+}
+#menu-medio{
+	width:1280px;
+	height:83px;
+	background:url(../imagenes/fondo-menu-inferior.png);
+	background:linear-gradient(top,#F2F2F2,#E1E1E1);
+	background:-moz-linear-gradient(top,#F2F2F2,#E1E1E1);
+	background:-o-linear-gradient(top,#F2F2F2,#E1E1E1);
+	background:-ms-linear-gradient(top,#F2F2F2,#E1E1E1);
+	background:-webkit-linear-gradient(top,#F2F2F2,#E1E1E1);
+	margin:0;
+	padding:0;
+	list-style:none;
+	border-radius:15px;
+	position:absolute;
+	left:0;
+	top:-50px;
+	z-index:100;
+}
+#menu-medio li{
+	float:left;
+}
+#menu-medio li a{
+	width:346px;
+	height:68px;
+	display:block;
+	border-right:1px solid #D4D4D4;
+	font-family:'ArchivoNarrowregular', Arial, sans-serif;
+	font-size:22px;
+	color:#3F3F51;
+	position:relative;
+	padding-left:80px;
+	padding-top:15px;
+}
+.ic-inf{
+	width:48px;
+	height:48px;
+	position:absolute;
+	top:10px;
+	left:20px;
+}
+#menu-medio li a span{
+	display:block;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#3F3F51;
+	font-style:italic;
+}
+#menu-medio li a:hover, #menu-medio li a:hover span{
+	background:#666D74;
+	color:#FFF;
+}
+#menu-medio li a:hover.primero{
+	background:#666D74;
+	color:#FFF;
+	border-radius:15px 0 0 15px;
+}
+#menu-medio li a.ultimo{
+	border-right:none;
+}
+#menu-medio li a:hover.ultimo{
+	background:#666D74;
+	color:#FFF;
+	border-radius:0 15px 15px 0;
+}
+#sombra{
+	height:15px;
+	position:absolute;
+	bottom:-48px;
+}
+#sombra img{
+	display:block;
+	margin:0 auto;
+}
+
+/*--- Menu ---*/
+	#menu{
+		height:auto;
+		background:none;
+		border-radius:0;
+	}
+	#logo{
+		display:none;
+	}
+	#menu ul{
+		display:none;
+		min-width:0;
+		height:auto;
+		width:100%;
+		float:none;
+		padding-top:0;
+	}
+
+	#menu li{
+		float:none;
+		width:100%;
+	}
+	#menu li a{
+		width:55%;
+		height:25px;
+		display:block;
+		padding:0;
+		border-right:none;
+		font-family:'ArchivoNarrowregular', Arial, sans-serif;
+		font-size:13px;
+		color:#fff;
+		position:relative;
+		padding-top:15px;
+		font-weight:normal;
+		background:#424751;
+		margin-bottom:1px;
+		padding-left:45%
+	}
+	#menu li a.ultimo{
+		width:55%;
+		height:25px;
+		display:block;
+		padding:0;
+		border-right:none;
+		font-family:'ArchivoNarrowregular', Arial, sans-serif;
+		font-size:13px;
+		color:#fff;
+		position:relative;
+		padding-top:15px;
+		padding-left:45%;
+		font-weight:normal;
+		background:#424751;
+		margin-bottom:1px;
+	}
+	#menu li a .iconos{
+		width:22px;
+		height:21px;
+		display:block;
+		position:absolute;
+		left:40%;
+		top:7px;
+	}
+
+	#mmovil{
+		display:block;
+		background:#424751;
+		width:98%;
+		padding-left:2%;
+		font-family:"ArchivoNarrowregular", Arial, Helvetica, sans-serif;
+		color:#FFF;
+		font-size:13px;
+		height:40px;
+		text-decoration:none;
+		text-align:left;
+		position:relative;
+	}
+	#mmovil img{
+		width:276px;
+		height:auto;
+		padding-top:4px;
+	}
+	#mmovil:after{
+		content:"";
+		background:url(../imagenes/icono-movil.png) no-repeat;
+		width:21px;
+		height:20px;
+		display:inline-block;
+		position:absolute;
+		right:10px;
+		top:10px;
+	}
+	.inicio{
+		display:block;
+	}
+	/*--- Cuerpo ---*/
+	#inferior{
+		margin:0;
+		background:none;
+		min-height:200px;
+	}
+	#inferior-centro{
+		width:100%;
+		margin:0 auto;
+		position:static;
+	}
+	#menu-medio{
+		width:100%;
+		height:auto;
+		background:none;
+		margin:0;
+		padding:0;
+		list-style:none;
+		border-radius:0;
+		position:static;
+	}
+	#menu-medio li{
+		float:none;
+		width:100%;
+	}
+	#menu-medio li a{
+		width:85%;
+		height:68px;
+		display:block;
+		border-right:none;
+		font-family:'ArchivoNarrowregular', Arial, sans-serif;
+		font-size:22px;
+		color:#3F3F51;
+		position:relative;
+		padding-left:15%;
+		padding-top:15px;
+		background:url(../imagenes/fondo-menu-inferior.png);
+		background:linear-gradient(top,#F2F2F2,#E1E1E1);
+		background:-moz-linear-gradient(top,#F2F2F2,#E1E1E1);
+		background:-o-linear-gradient(top,#F2F2F2,#E1E1E1);
+		background:-ms-linear-gradient(top,#F2F2F2,#E1E1E1);
+		background:-webkit-linear-gradient(top,#F2F2F2,#E1E1E1);
+		margin-bottom:1px;
+	}
+	.ic-inf{
+		width:48px;
+		height:48px;
+		position:absolute;
+		top:10px;
+		left:20px;
+	}
+	#menu-medio li a span{
+		display:block;
+		font-family:Arial, sans-serif;
+		font-size:12px;
+		color:#3F3F51;
+		font-style:italic;
+	}
+	#menu-medio li a:hover, #menu-medio li a:hover span{
+		background:#666D74;
+		color:#FFF;
+	}
+	#menu-medio li a:hover.primero{
+		background:#666D74;
+		color:#FFF;
+		border-radius:0;
+	}
+	#menu-medio li a.ultimo{
+		border-right:none;
+	}
+	#menu-medio li a:hover.ultimo{
+		background:#666D74;
+		color:#FFF;
+		border-radius:0;
+	}
+	#sombra{
+		display:none;
+	}
