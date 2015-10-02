@@ -15,8 +15,10 @@ class Admin extends CI_Controller {
 		{
 			redirect(base_url().'login');
 		}
-		$data['titulo'] = 'Bienvenido Administrador';
-		$this->load->view('Admin/admin_view',$data);
+		  $data['titulo'] = 'Registro de Ciudades | Gim Master';
+		  $data['main_content'] = 'Admin/admin_view';
+		  $this->load->view('Layout/template',$data);	
+
 	}
 
 
