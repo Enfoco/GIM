@@ -35,6 +35,8 @@ class Eps_model extends CI_Model {
         }
     }
 
+
+
     function get_datatables()
     {
         $this->_get_datatables_query();
@@ -59,7 +61,7 @@ class Eps_model extends CI_Model {
 
     public function get_by_id($id)
     {
-      
+
         $this->db->from($this->table);
         $this->db->where('id',$id);
         $query = $this->db->get();

@@ -8,7 +8,7 @@ class Ciudad extends CI_Controller {
 		$this->load->model('Ciudad_model','ciudad');
 		$this->load->library('session');
 		$this->load->database();
-		
+
 
 	}
 
@@ -18,8 +18,10 @@ class Ciudad extends CI_Controller {
 		{
 			redirect(base_url().'login');
 		}
+
+
     $data['titulo'] = 'Registro de Ciudades | Gim Master';
-    $data['main_content'] = 'ciudad/index';
+    $data['main_content'] = 'Ciudad/index';
     $this->load->view('Layout/template',$data);
 	}
 

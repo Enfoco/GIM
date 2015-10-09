@@ -239,117 +239,7 @@
 		</nav>
 	</header>
 	<!-- Left side column. contains the logo and sidebar -->
-	<aside class="main-sidebar">
-		<!-- sidebar: style can be found in sidebar.less -->
-		<section class="sidebar">
-			<!-- Sidebar user panel -->
-			<div class="user-panel">
-				<div class="pull-left image">
-					<img src="<?= base_url("assets/images/user2-160x160.jpg")?>" class="img-circle" alt="User Image">
-				</div>
-				<div class="pull-left info">
-					<p><?= $this->session->userdata('perfil');?></p>
-					<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-				</div>
-			</div>
-			<!-- search form -->
-			<form action="#" method="get" class="sidebar-form">
-				<div class="input-group">
-					<input type="text" name="q" class="form-control" placeholder="Search...">
-					<span class="input-group-btn">
-						<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-					</span>
-				</div>
-			</form>
-			<!-- /.search form -->
-			<!-- sidebar menu: : style can be found in sidebar.less -->
-			<ul class="sidebar-menu">
-				<li class="header">Manú de Navegación</li>
-				<li class="active treeview">
-					<a href="#">
-						<i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-					</a>
-					<ul class="treeview-menu">
-						<li class="active"><a href="<?= base_url("Admin");?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-
-					</ul>
-				</li>
-
-			<li class="treeview">
-					<a href="#">
-						<i class="fa fa-pie-chart"></i>
-						<span>Estudiantes</span>
-						<i class="fa fa-angle-left pull-right"></i>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>Registro</a></li>
-						<li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Admin. Estudiantes</a></li>
-						<li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Certificados</a></li>
-			 		</ul>
-				</li>
-				<li class="treeview">
-					<a href="#">
-						<i class="fa fa-laptop"></i>
-						<span>Parientes</span>
-						<i class="fa fa-angle-left pull-right"></i>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Administración</a></li>
-					</ul>
-				</li>
-
-				<li class="treeview">
-					<a href="#">
-						<i class="fa fa-table"></i> <span>Docentes</span>
-						<i class="fa fa-angle-left pull-right"></i>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Registro</a></li>
-						<li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Administración</a></li>
-					</ul>
-				</li>
-
-					<a href="pages/calendar.html">
-						<li><a href="documentation/index.html"><i class="fa fa-calendar"></i> <span>Calendario</span><small class="label pull-right bg-red">3</small></a></li>
-
-					</a>
-				</li>
-				<li>
-					<a href="pages/mailbox/mailbox.html">
-						<i class="fa fa-envelope"></i> <span>Mailbox</span>
-						<small class="label pull-right bg-yellow">12</small>
-					</a>
-				</li>
-
-				<li class="treeview">
-					<a href="#">
-						<i class="fa fa-share"></i> <span>Configuración</span>
-						<i class="fa fa-angle-left pull-right"></i>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="#"><i class="fa fa-circle-o"></i> Plantel Educativo</a></li>
-						<li>
-							<a href="#"><i class="fa fa-circle-o"></i> Entidades <i class="fa fa-angle-left pull-right"></i></a>
-							<ul class="treeview-menu">
-								<li><a href="#"><i class="fa fa-circle-o"></i> Eps</a></li>
-								<li>
-									<a href="#"><i class="fa fa-circle-o"></i> Ips <i class="fa fa-angle-left pull-right"></i></a>
-									<!--<ul class="treeview-menu">
-										<li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-										<li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-									</ul>-->
-								</li>
-							</ul>
-						</li>
-						<li><a href="#"><i class="fa fa-circle-o"></i> Ciudad/Municipio</a></li>
-					</ul>
-				</li>
-				<li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Ayudas?</span></a></li>
-
-			</ul>
-		</section>
-		<!-- /.sidebar -->
-	</aside>
+	
 
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -373,26 +263,26 @@
 					<!-- small box -->
 					<div class="small-box bg-aqua">
 						<div class="inner">
-							<h3>150</h3>
-							<p>Estudiantes</p>
+							<h3><?=$count_alum;?></h3> <p>
+								Estudiantes
+							</p>
 						</div>
 						<div class="icon">
 							<i class="ion ion-bag"></i>
 						</div>
-						<a href="#" class="small-box-footer">Registrar <i class="fa fa-arrow-circle-right"></i></a>
-					</div>
+				</div>
 				</div><!-- ./col -->
 				<div class="col-lg-3 col-xs-6">
 					<!-- small box -->
 					<div class="small-box bg-green">
 						<div class="inner">
-							<h3>53<sup style="font-size: 20px">%</sup></h3>
+							<h3><?=$count_prof;?></h3>
 							<p>Docentes</p>
 						</div>
 						<div class="icon">
 							<i class="ion ion-stats-bars"></i>
 						</div>
-						<a href="#" class="small-box-footer">Registrar <i class="fa fa-arrow-circle-right"></i></a>
+
 					</div>
 				</div><!-- ./col -->
 				<div class="col-lg-3 col-xs-6">
@@ -405,7 +295,7 @@
 						<div class="icon">
 							<i class="ion ion-person-add"></i>
 						</div>
-						<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+
 					</div>
 				</div><!-- ./col -->
 				<div class="col-lg-3 col-xs-6">
@@ -418,7 +308,7 @@
 						<div class="icon">
 							<i class="ion ion-pie-graph"></i>
 						</div>
-						<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+
 					</div>
 				</div><!-- ./col -->
 			</div><!-- /.row -->
@@ -435,9 +325,7 @@
 							<li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
 						</ul>
 						<div class="tab-content no-padding">
-<p>
-	Hol
-</p>
+
 
 						</div>
 					</div><!-- /.nav-tabs-custom -->
